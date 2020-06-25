@@ -82,7 +82,7 @@ elif [[ "$1" == *".c" ]]; then
 fi
 
 if [ $flag -eq 0 ]; then
-	toilet -t --gay Congratultions.
+	toilet -t --gay Congratulations.
 else
 	echo "$flag errors occurred."
 fi
