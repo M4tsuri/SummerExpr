@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 cat /dev/null >test.out
 
@@ -6,6 +6,8 @@ if [ ! $1 ]; then
     echo "Please specify a mode."
     exit
 fi
+
+flag=0
 
 if [[ $1 == 'all' ]]; then
     for temp in $(find ./ -name "test[0-9].out"); do
@@ -20,10 +22,11 @@ if [[ $1 == 'all' ]]; then
 	    	if [ $? -eq 1 ]; then
 				cat tmp >> test.out
 				echo "Wrong output!"
+				flag=$(($flag+1))
 	    	else
 				echo 'Right output!' | tee -a test.out
 	    	fi  
-	    	echo "\n" | tee -a test.out
+	    	echo | tee -a test.out
 		done
     done
 elif [[ "$1" == *".in" ]]; then 
@@ -42,10 +45,11 @@ elif [[ "$1" == *".in" ]]; then
 		if [ $? -eq 1 ]; then
 	    	echo "Wrong output!"
 			cat tmp >> test.out
+			flag=$(($flag+1))
 		else
 	    	echo 'Right output!'
 		fi  
-		echo "\n" | tee -a test.out
+		echo | tee -a test.out
 		rm out tmp
     done
 elif [[ "$1" == *".c" ]]; then
@@ -55,7 +59,6 @@ elif [[ "$1" == *".c" ]]; then
 		echo "Compile failed."
 		exit
 	fi
-	flag=0
 	for exp in $(ls *.in); do
 		echo "Using $exp as input." | tee -a test.out
 		temp=${exp%.in*}.out
@@ -73,10 +76,13 @@ elif [[ "$1" == *".c" ]]; then
 		else
 	    	echo 'Right output!'
 		fi
-		echo "\n" | tee -a test.out
+		echo | tee -a test.out
 	done
-	if [ $flag -eq 0 ]; then
-		toilet -t --gay Congratultions.
-	fi
 	rm out tmp
+fi
+
+if [ $flag -eq 0 ]; then
+	toilet -t --gay Congratultions.
+else
+	echo "$flag errors occurred."
 fi
