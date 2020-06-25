@@ -29,4 +29,6 @@ git clone https://github.com/CTSinon/SummerExpr.git
 
 注：输出congratulations即所有测试通过，否则输出失败的次数。
 
+#### 如果出现Permission denied错误，请运行chmod +x test
+
 输出的结果将会在test.out中保存一份副本，方便随时查看。
