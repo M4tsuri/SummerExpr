@@ -9,7 +9,7 @@ apt-get install toilet
 git clone https://github.com/CTSinon/SummerExpr.git
 ```
 
-然后将test文件复制到你要debug的目录下（和c源文件放在一起）
+然后将test文件复制到你要debug的目录下（和c源文件放在一起）运行`chmod +x test`
 
 ## 使用方法
 
