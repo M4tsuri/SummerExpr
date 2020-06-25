@@ -1,0 +1,82 @@
+#!/bin/zsh
+
+cat /dev/null >test.out
+
+if [ ! $1 ]; then
+    echo "Please specify a mode."
+    exit
+fi
+
+if [[ $1 == 'all' ]]; then
+    for temp in $(find ./ -name "test[0-9].out"); do
+		exp=${temp%.out*}.in
+		echo "Using $exp as input..." | tee -a test.out
+		for file in $(ls *.c); do
+	    	echo "Testing file $file..." | tee -a test.out
+	    	gcc $file -g -O0 -Wall -o out 2>>test.out
+	    	cat $exp | timeout 1 ./out 2>&1 | tee tmp
+	    	echo
+	    	diff tmp $temp
+	    	if [ $? -eq 1 ]; then
+				cat tmp >> test.out
+				echo "Wrong output!"
+	    	else
+				echo 'Right output!' | tee -a test.out
+	    	fi  
+	    	echo "\n" | tee -a test.out
+		done
+    done
+elif [[ "$1" == *".in" ]]; then 
+    exp=$1
+    temp=${exp%.in*}.out
+    for file in $(ls *.c); do
+		echo "Testing file $file..." | tee -a test.out
+		gcc $file -g -O0 -Wall -o out
+		cat $exp | timeout 1 ./out 2>&1 | tee tmp
+		echo
+		if [ ! -f "$temp" ]; then
+	    	echo "Output example not found."
+	    	continue
+		fi
+		diff tmp $temp
+		if [ $? -eq 1 ]; then
+	    	echo "Wrong output!"
+			cat tmp >> test.out
+		else
+	    	echo 'Right output!'
+		fi  
+		echo "\n" | tee -a test.out
+		rm out tmp
+    done
+elif [[ "$1" == *".c" ]]; then
+	file=$1
+	gcc $file -g -O0 -Wall -o out
+	if [ ! $? ]; then
+		echo "Compile failed."
+		exit
+	fi
+	flag=0
+	for exp in $(ls *.in); do
+		echo "Using $exp as input." | tee -a test.out
+		temp=${exp%.in*}.out
+		cat $exp | timeout 1 ./out 2>&1 | tee tmp
+		if [ ! -f "$temp" ]; then
+	    	echo "Output example not found."
+	    	continue
+		fi
+		echo
+		diff tmp $temp
+		if [ $? -eq 1 ]; then
+	    	echo "Wrong output!"
+			cat tmp >> test.out
+			flag=$(($flag+1))
+		else
+	    	echo 'Right output!'
+		fi
+		echo "\n" | tee -a test.out
+	done
+	if [ $flag -eq 0 ]; then
+		toilet -t --gay Congratultions.
+	fi
+	rm out tmp
+fi
