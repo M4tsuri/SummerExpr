@@ -25,7 +25,7 @@ git clone https://github.com/CTSinon/SummerExpr.git
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gg4x7wn916j31c00u07eq.jpg)
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gg4x7wy5vvj31c00u0dqv.jpg)
-![](https://tva1.sinaimg.cn/large/007S8ZIlly1gg4x7z2cawj31c00u0ajk.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gg4xu435njj31c00u0akt.jpg)
 
 注：输出congratulations即所有测试通过，否则输出失败的次数。
 
