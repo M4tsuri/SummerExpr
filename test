@@ -14,6 +14,7 @@ if [[ $1 == 'all' ]]; then
 		./test $temp
 		flag=$(($?+$flag))
     done
+	echo "All tests done!"
 elif [[ "$1" == *".in" ]]; then 
     exp=$1
     temp=${exp%.in*}.out
