@@ -9,7 +9,7 @@ apt-get install toilet
 git clone https://github.com/CTSinon/SummerExpr.git
 ```
 
-然后将test文件复制到你要debug的目录下（和c源文件放在一起）
+然后将test文件复制到你要debug的目录下（和c源文件放在一起）运行`chmod +x test`
 
 ## 使用方法
 
@@ -28,5 +28,7 @@ git clone https://github.com/CTSinon/SummerExpr.git
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gg4xu435njj31c00u0akt.jpg)
 
 注：输出congratulations即所有测试通过，否则输出失败的次数。
+
+#### 如果出现Permission denied错误，请运行chmod +x test
 
 输出的结果将会在test.out中保存一份副本，方便随时查看。
