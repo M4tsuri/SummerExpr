@@ -32,3 +32,5 @@ git clone https://github.com/CTSinon/SummerExpr.git
 #### 如果出现Permission denied错误，请运行chmod +x test
 
 输出的结果将会在test.out中保存一份副本，方便随时查看。
+
+项目中提供了一个gen.py文件，你可以尝试使用它来生成你自己的测试文件。
