@@ -65,7 +65,7 @@ git clone https://github.com/CTSinon/SummerExpr.git
 if %count% GTR 200 (goto normal)
 ```
 
-single-oppose.bat 进行单独两份代码的比较，题号自行输入
+single-oppose.bat 进行单独两份代码的比较，题号自行输入。
 代码的自行指定则是在 single-oppose.bat 的第 `3、4` 行的 `10、9` 处
 
 ```bat
