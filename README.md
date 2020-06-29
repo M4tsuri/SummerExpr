@@ -44,7 +44,7 @@ git clone https://github.com/CTSinon/SummerExpr.git
 ```
 
 然后把所有代码 copy 到 for-win/code_for_test/，如图：
-<img src="https://note.youdao.com/yws/api/personal/file/WEB317a631062db5256611419f07b0b9591?method=download&shareKey=96a4e441153ff0a5acde7831623cb9ab" height = "200">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB317a631062db5256611419f07b0b9591?method=download&shareKey=96a4e441153ff0a5acde7831623cb9ab">
 
 ### 使用方法
 
@@ -56,19 +56,19 @@ git clone https://github.com/CTSinon/SummerExpr.git
 发现输出不同时将自动暂停，输出将保存在 **代码标号.out** 文件中，输入将保存在 **data.txt** 文件中
 如图：
 <img src="https://note.youdao.com/yws/api/personal/file/WEB1aaa0b0dc0bc1879e9543612cd86610e?method=download&shareKey=48ceecddbda7aae2016b469ca0c05f8a">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBa0d0d19564e889d6869c27226d37a5b2?method=download&shareKey=88a7d234fdde831e8636f1829e8d2ff8" height="100">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB60694d5f31cc369271acac3251c70cde?method=download&shareKey=6b655ae60e5c300d3ddc3efbfe94919c" height="100">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBa0d0d19564e889d6869c27226d37a5b2?method=download&shareKey=88a7d234fdde831e8636f1829e8d2ff8">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB60694d5f31cc369271acac3251c70cde?method=download&shareKey=6b655ae60e5c300d3ddc3efbfe94919c" >
 
 修改循环次数的地方在 oppose.bat 中的第 20 行的 200 处
 
-```
+```bat
 if %count% GTR 200 (goto normal)
 ```
 
 single-oppose.bat 进行单独两份代码的比较，题号自行输入
 代码的自行指定则是在 single-oppose.bat 的第 3、4 行的 10、9 处
 
-```
+```bat
 set /a std = 10
 set /a my  = 9
 ```
