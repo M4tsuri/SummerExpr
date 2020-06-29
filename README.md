@@ -43,7 +43,7 @@ git clone https://github.com/CTSinon/SummerExpr.git
 git clone https://github.com/CTSinon/SummerExpr.git
 ```
 
-然后把所有代码 copy 到 for-win/code_for_test/，如图：</br>
+然后把所有代码 copy 到 `for-win/code_for_test/`，如图：</br>
 <img src="https://note.youdao.com/yws/api/personal/file/WEB317a631062db5256611419f07b0b9591?method=download&shareKey=96a4e441153ff0a5acde7831623cb9ab" height = "300"></br>
 
 ### 使用方法
