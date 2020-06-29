@@ -59,14 +59,14 @@ git clone https://github.com/CTSinon/SummerExpr.git
 <img src="https://note.youdao.com/yws/api/personal/file/WEBa0d0d19564e889d6869c27226d37a5b2?method=download&shareKey=88a7d234fdde831e8636f1829e8d2ff8" height = "200"></br>
 <img src="https://note.youdao.com/yws/api/personal/file/WEB60694d5f31cc369271acac3251c70cde?method=download&shareKey=6b655ae60e5c300d3ddc3efbfe94919c" height = "200"></br>
 
-修改循环次数的地方在 oppose.bat 中的第 20 行的 200 处
+修改循环次数的地方在 oppose.bat 中的第 `20` 行的 `200` 处
 
 ```bat
 if %count% GTR 200 (goto normal)
 ```
 
 single-oppose.bat 进行单独两份代码的比较，题号自行输入
-代码的自行指定则是在 single-oppose.bat 的第 3、4 行的 10、9 处
+代码的自行指定则是在 single-oppose.bat 的第 `3、4` 行的 `10、9` 处
 
 ```bat
 set /a std = 10
@@ -76,4 +76,4 @@ set /a my  = 9
 #### 可能的问题
 
 - 第六题和第八题因为时间问题没有写生成随机样例的程序
-- 也许会因为某些未发现的 bug 陷入死循环吧。。这时请找 19 级学号尾号 109 的人询问
+- 也许会因为某些未发现的 bug 陷入死循环吧。。这时请找 `19` 级学号尾号 `109` 的人询问
