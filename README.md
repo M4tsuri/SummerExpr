@@ -55,9 +55,9 @@ git clone https://github.com/CTSinon/SummerExpr.git
 
 发现输出不同时将自动暂停，输出将保存在 **代码标号.out** 文件中，输入将保存在 **data.txt** 文件中
 如图：
-<img src="https://note.youdao.com/yws/api/personal/file/WEB1aaa0b0dc0bc1879e9543612cd86610e?method=download&shareKey=48ceecddbda7aae2016b469ca0c05f8a" height = "300"></br>
-<img src="https://note.youdao.com/yws/api/personal/file/WEBa0d0d19564e889d6869c27226d37a5b2?method=download&shareKey=88a7d234fdde831e8636f1829e8d2ff8" height = "300"></br>
-<img src="https://note.youdao.com/yws/api/personal/file/WEB60694d5f31cc369271acac3251c70cde?method=download&shareKey=6b655ae60e5c300d3ddc3efbfe94919c" height = "300"></br>
+<img src="https://note.youdao.com/yws/api/personal/file/WEB1aaa0b0dc0bc1879e9543612cd86610e?method=download&shareKey=48ceecddbda7aae2016b469ca0c05f8a" height = "200"></br>
+<img src="https://note.youdao.com/yws/api/personal/file/WEBa0d0d19564e889d6869c27226d37a5b2?method=download&shareKey=88a7d234fdde831e8636f1829e8d2ff8" height = "200"></br>
+<img src="https://note.youdao.com/yws/api/personal/file/WEB60694d5f31cc369271acac3251c70cde?method=download&shareKey=6b655ae60e5c300d3ddc3efbfe94919c" height = "200"></br>
 
 修改循环次数的地方在 oppose.bat 中的第 20 行的 200 处
 
